@@ -1,38 +1,28 @@
 ---
-title: Hello World
+title: 删除github仓库中的文件夹命令
 ---
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 
-## Quick Start
-
-### Create a new post
+记录删除github仓库中的文件夹命令，git的使用一直没有顺风顺水，命令的参数都不知道是做什么的，先记录下来以备查阅~
 
 ``` bash
-$ hexo new "My New Post"
+$ git rm -h
 ```
 
-More info: [Writing](https://hexo.io/docs/writing.html)
+用法：git rm [<选项>] [–] <文件>…
 
-### Run server
+| 参数      |    意义 | 
+| :-------- | --------:| 
+| -n, –dry-run  | 演习 | 
+| -q, –quiet     |   不列出删除的文件 | 
+| –cached      |    只从索引区删除 | 
+| -f， –force     |    忽略文件更新状态检查 | 
+| -r     |    允许递归删除 | 
+| –ignore-unmatch     |    即使没有匹配，也以零状态退出 | 
+
+## 操作案例
 
 ``` bash
-$ hexo server
+$ git rm -r --cached  "directory-name"  // 要删除的文件夹名字
+$ git commit -m "remove new gitignore directory"
+$ git push origin master
 ```
-
-More info: [Server](https://hexo.io/docs/server.html)
-
-### Generate static files
-
-``` bash
-$ hexo generate
-```
-
-More info: [Generating](https://hexo.io/docs/generating.html)
-
-### Deploy to remote sites
-
-``` bash
-$ hexo deploy
-```
-
-More info: [Deployment](https://hexo.io/docs/deployment.html)
