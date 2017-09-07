@@ -6,7 +6,7 @@
 favicon: /favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "Hexo, NexT"
+keywords: "Bearn, Byrain"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -50,7 +50,14 @@ index_with_subtitle: false
 # Value before `||` delimeter is the target link.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
-  home: / || home
+  home: /
+  categories: /categories/
+  #about: /about/
+  archives: /archives/
+  tags: /tags/
+  #sitemap: /sitemap.xml
+  #commonweal: /404/
+  #home: / || home
   #about: /about/ || user
   #tags: /tags/ || tags
   #categories: /categories/ || th
@@ -62,6 +69,15 @@ menu:
 # Enable/Disable menu icons.
 menu_icons:
   enable: true
+  #KeyMapsToMenuItemKey: NameOfTheIconFromFontAwesome
+  home: home
+  #about: user
+  categories: th
+  #schedule: calendar
+  tags: tags
+  archives: archive
+  #sitemap: sitemap
+  #commonweal: heartbeat
 
 
 # ---------------------------------------------------------------
@@ -84,8 +100,8 @@ scheme: Mist
 # Key is the link label showing to end users.
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
-#social:
-  #GitHub: https://github.com/yourname || github
+social:
+  GitHub: https://github.com/Jexecellent
   #E-Mail: mailto:yourname@gmail.com || envelope
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
@@ -100,13 +116,26 @@ social_icons:
   enable: true
   icons_only: false
   transition: false
+  # Icon Mappings.
+  # KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
+  GitHub: github
+  E-Mail: envelope
+  Google: google
+  Twitter: twitter
+  FB Page: facebook
+  VK Group: vk
+  Skype: skype
+  YouTube: youtube
+  Instagram: instagram
+  StackOverflow: stack-overflow
+  微博: weibo
 
 # Blog rolls
-#links_title: Links
+links_title: Links
 #links_layout: block
-#links_layout: inline
-#links:
-  #Title: http://example.com/
+links_layout: inline
+links:
+  浅葱小唱: http://www.cnblogs.com/qcxc/
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
