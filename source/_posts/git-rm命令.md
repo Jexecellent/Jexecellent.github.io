@@ -1,5 +1,8 @@
 ---
 title: 删除github仓库中的文件夹命令
+date:
+tags : 'git'
+categonies: 'Tools'
 ---
 
 记录删除github仓库中的文件夹命令，git的使用一直没有顺风顺水，命令的参数都不知道是做什么的，先记录下来以备查阅~
