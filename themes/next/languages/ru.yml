@@ -97,9 +97,3 @@ symbol:
   comma: ', '
   period: '. '
   colon: ':'
-
-reward:
-  donate: Донат
-  wechatpay: WeChat Pay
-  alipay: Alipay
-  bitcoin: Bitcoin
