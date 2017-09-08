@@ -23,14 +23,15 @@
 
 {% if theme.copyright %}
   <div class="powered-by">
-    {{ __('footer.powered', '<a class="theme-link" href="https://hexo.io">Hexo</a>') }}
+    <!-- {{ __('footer.powered', '<a class="theme-link" href="https://hexo.io">Hexo</a>') }} -->
+    学海无涯苦作舟
   </div>
 
   <span class="post-meta-divider">|</span>
 
   <div class="theme-info">
     {{ __('footer.theme') }} &mdash;
-    <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next"  target="_blank">
       NexT.{{ theme.scheme }}
     </a>
   </div>
