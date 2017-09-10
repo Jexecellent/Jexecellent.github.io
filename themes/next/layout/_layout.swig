@@ -8,7 +8,7 @@
 <html class="{{ html_class | lower }}" lang="{{ config.language }}">
 <head>
   {% include '_partials/head.swig' %}
-  <title>{% block title %}{% endblock %} - 为中华之崛起而读书</title>
+  <title>{% block title %}{% endblock %} - Just do it</title>
   {% include '_third-party/analytics/index.swig' %}
 
   <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
