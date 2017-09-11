@@ -4,10 +4,10 @@
 <!-- <a class="jiathis_button_fav">收藏夹</a>
 <a class="jiathis_button_copy">复制网址</a>
 <a class="jiathis_button_email">邮件</a> -->
-<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_weixin"></a>
 <!-- <a class="jiathis_button_qzone">QQ空间</a>
 <a class="jiathis_button_tqq">腾讯微薄</a> -->
-<a class="jiathis_button_tsina">新浪</a>
+<a class="jiathis_button_tsina"></a>
 <a class="jiathis_button_share">一键分享</a>
 
 <a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
@@ -18,7 +18,7 @@ var jiathis_config={
   data_track_clickback:true,
   summary:"",
   shortUrl:false,
-  hideMore:false
+  hideMore:true
 }
 </script>
 <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid={{ theme.jiathis.uid }}" charset="utf-8"></script>
