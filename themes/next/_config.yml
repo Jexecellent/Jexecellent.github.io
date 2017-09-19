@@ -323,16 +323,16 @@ han: false
 # Duoshuo ShortName
 #duoshuo_shortname:
 
-# Disqus
+# Disqus 多说评论
 disqus:
-  enable: true
+  enable: false
   shortname: Bearn
   count: true
 
 # Hypercomments
 #hypercomments_id:
 
-# changyan
+# changyan 友言评论
 changyan:
   enable: false
   appid:
@@ -369,7 +369,7 @@ valine:
 # This plugin is more useful in China, make sure you known how to use it.
 # And you can find the use guide at official webiste: http://www.jiathis.com/.
 # Warning: JiaThis does not support https.
-jiathis: true
+jiathis: false
   ##uid: Get this uid from http://www.jiathis.com/
 #add_this_id:
 
