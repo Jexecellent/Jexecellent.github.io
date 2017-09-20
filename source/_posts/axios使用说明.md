@@ -5,7 +5,6 @@ tags: ['http']
 categories : Tools
 ---
 
-
 基于Promise的浏览器和node.js的HTTP 客户端
 
 ## Features - 特征
@@ -14,6 +13,7 @@ categories : Tools
 - 从node.js发送[http](http://nodejs.org/api/http.html)请求
 - 支持 [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) API
 - 拦截请求及响应
+<!-- more -->
 - 改造请求和响应数据
 - 取消请求
 - 自动转换JSON数据
