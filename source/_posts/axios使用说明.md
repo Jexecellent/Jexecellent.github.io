@@ -44,7 +44,7 @@ Using cdn:
 执行`GET`请求
 
 ```js
-// Make a request for a user with a given ID
+// 向具有指定ID的用户发出请求
 axios.get('/user?ID=12345')
   .then(function (response) {
     console.log(response);
@@ -53,7 +53,7 @@ axios.get('/user?ID=12345')
     console.log(error);
   });
 
-// Optionally the request above could also be done as
+// 上述请求也可以作为
 axios.get('/user', {
     params: {
       ID: 12345
@@ -193,54 +193,54 @@ var instance = axios.create({
 
 ```js
 {
-  // `url` is the server URL that will be used for the request
+  // `url` 是将用于请求的服务器URL
   url: '/user',
 
-  // `method` is the request method to be used when making the request
+  // `method` 是在请求时使用的请求方法
   method: 'get', // default
 
-  // `baseURL` will be prepended to `url` unless `url` is absolute.
-  // It can be convenient to set `baseURL` for an instance of axios to pass relative URLs
-  // to methods of that instance.
+  // `baseURL`将被添加到`url`，除非`url`是绝对的
+  // 可以方便的设置`baseURL`为一个实例的axios传递相对URL   
+  //到该实例的方法。
   baseURL: 'https://some-domain.com/api/',
 
-  // `transformRequest` allows changes to the request data before it is sent to the server
-  // This is only applicable for request methods 'PUT', 'POST', and 'PATCH'
-  // The last function in the array must return a string or an instance of Buffer, ArrayBuffer,
+  // `transformRequest` 允许在发送到服务器之前更改请求数据
+  // 这仅适用于请求方法 'PUT', 'POST', and 'PATCH'
+  // 数组中的最后一个函数必须返回一个字符串或Buffer的实例, ArrayBuffer
   // FormData or Stream
-  // You may modify the headers object.
+  // 可以修改标题对象
   transformRequest: [function (data, headers) {
-    // Do whatever you want to transform the data
+    //  Do whatever you want to transform the data
 
     return data;
   }],
 
-  // `transformResponse` allows changes to the response data to be made before
-  // it is passed to then/catch
+  // `transformResponse` 允许在它被传递给then/catch之前对响应数据进行更改
   transformResponse: [function (data) {
     // Do whatever you want to transform the data
 
     return data;
   }],
 
-  // `headers` are custom headers to be sent
+  // `headers` 要被发送的请求头信息
   headers: {'X-Requested-With': 'XMLHttpRequest'},
 
-  // `params` are the URL parameters to be sent with the request
-  // Must be a plain object or a URLSearchParams object
+  // `params` 是要与请求一起发送的URL参数
+  // 必须是纯对象或URLSearchParams对象
+  // (Must be a plain object or a URLSearchParams object)
   params: {
     ID: 12345
   },
 
-  // `paramsSerializer` is an optional function in charge of serializing `params`
+  // `paramsSerializer` 是一个可选的函数，负责序列化`params`
   // (e.g. https://www.npmjs.com/package/qs, http://api.jquery.com/jquery.param/)
   paramsSerializer: function(params) {
     return Qs.stringify(params, {arrayFormat: 'brackets'})
   },
 
-  // `data` is the data to be sent as the request body
-  // Only applicable for request methods 'PUT', 'POST', and 'PATCH'
-  // When no `transformRequest` is set, must be of one of the following types:
+  // `data` 是作为请求体将被发送的数据
+  // 仅适用于请求方式 'PUT', 'POST', and 'PATCH'
+  // 当没有设置“transformRequest”时，必须是以下类型之一:
   // - string, plain object, ArrayBuffer, ArrayBufferView, URLSearchParams
   // - Browser only: FormData, File, Blob
   // - Node only: Stream, Buffer
@@ -248,75 +248,89 @@ var instance = axios.create({
     firstName: 'Fred'
   },
 
-  // `timeout` specifies the number of milliseconds before the request times out.
-  // If the request takes longer than `timeout`, the request will be aborted.
+  // `timeout` 指定请求超时的毫秒数.
+  // 如果请求比“timeout”长，请求将被中止
   timeout: 1000,
 
-  // `withCredentials` indicates whether or not cross-site Access-Control requests
-  // should be made using credentials
+  // `withCredentials` 表示是否支持跨域请求
+  // 应使用凭证
   withCredentials: false, // default
 
-  // `adapter` allows custom handling of requests which makes testing easier.
-  // Return a promise and supply a valid response (see lib/adapters/README.md).
+  // `adapter` 允许自定义处理请求，使测试更容易.
+  // 返回 promise 并提供有效的回复
+  // (Return a promise and supply a valid response).
   adapter: function (config) {
     /* ... */
   },
 
-  // `auth` indicates that HTTP Basic auth should be used, and supplies credentials.
-  // This will set an `Authorization` header, overwriting any existing
-  // `Authorization` custom headers you have set using `headers`.
+  // `auth` 表示应使用HTTP Basic认证，并提供凭据。
+  // 这将设置一个 `Authorization` 头, 覆盖任何现有的
+  // 使用`header`设置的`Authorization`自定义头文件。
   auth: {
     username: 'janedoe',
     password: 's00pers3cret'
   },
 
-  // `responseType` indicates the type of data that the server will respond with
-  // options are 'arraybuffer', 'blob', 'document', 'json', 'text', 'stream'
+  // `responseType` 表示服务器将响应的数据类型   
+  //选项是'arraybuffer'，'blob'，'document'，'json'，'text'，'stream
   responseType: 'json', // default
 
   // `xsrfCookieName` is the name of the cookie to use as a value for xsrf token
+  // `xsrfCookieName` 是携带xsrf token的http标头的名称
   xsrfCookieName: 'XSRF-TOKEN', // default
 
   // `xsrfHeaderName` is the name of the http header that carries the xsrf token value
   xsrfHeaderName: 'X-XSRF-TOKEN', // default
 
   // `onUploadProgress` allows handling of progress events for uploads
+  // `onUploadProgress` 监听上传进度的事件
   onUploadProgress: function (progressEvent) {
     // Do whatever you want with the native progress event
   },
 
   // `onDownloadProgress` allows handling of progress events for downloads
+  // `onDownloadProgress` 监听下载进度的事件
   onDownloadProgress: function (progressEvent) {
     // Do whatever you want with the native progress event
   },
 
   // `maxContentLength` defines the max size of the http response content allowed
+  // `maxContentLength` 定义允许响应文件的最大值
   maxContentLength: 2000,
 
   // `validateStatus` defines whether to resolve or reject the promise for a given
   // HTTP response status code. If `validateStatus` returns `true` (or is set to `null`
   // or `undefined`), the promise will be resolved; otherwise, the promise will be
   // rejected.
+  // `validateStatus` 定义resolve or reject 的 promise返回的HTTP response状态码
   validateStatus: function (status) {
     return status >= 200 && status < 300; // default
   },
 
   // `maxRedirects` defines the maximum number of redirects to follow in node.js.
+  // `maxRedirects` 在node.js中定义要重定向的最大数量.
   // If set to 0, no redirects will be followed.
   maxRedirects: 5, // default
 
   // `httpAgent` and `httpsAgent` define a custom agent to be used when performing http
   // and https requests, respectively, in node.js. This allows options to be added like
   // `keepAlive` that are not enabled by default.
+
+  // `httpAgent` and `httpsAgent`在node.js中分别执行 http 和 https 请求时定义要使用的自定义代理
+  // 允许添加类似`keepAlive`的选项，默认情况下未启用。
   httpAgent: new http.Agent({ keepAlive: true }),
   httpsAgent: new https.Agent({ keepAlive: true }),
 
-  // 'proxy' defines the hostname and port of the proxy server
+  // 'proxy' 定义代理服务器的主机名和端口
   // Use `false` to disable proxies, ignoring environment variables.
+  // 使用`false`来禁用代理，忽略环境变量
   // `auth` indicates that HTTP Basic auth should be used to connect to the proxy, and
   // supplies credentials.
+  // `auth`表示应该使用HTTP Basic auth连接到代理，提供凭证。
   // This will set an `Proxy-Authorization` header, overwriting any existing
   // `Proxy-Authorization` custom headers you have set using `headers`.
+  // 这将设置一个 `Proxy-Authorization` 头, 覆盖任何现有的
+  // 使用`header`设置的`Proxy-Authorization`自定义头文件。
   proxy: {
     host: '127.0.0.1',
     port: 9000,
@@ -326,8 +340,8 @@ var instance = axios.create({
     }
   },
 
-  // `cancelToken` specifies a cancel token that can be used to cancel the request
-  // (see Cancellation section below for details)
+  // `cancelToken` 指定可以用于取消请求的取消token
+  // (有关详情，请参阅下面的取消部分)
   cancelToken: new CancelToken(function (cancel) {
   })
 }
