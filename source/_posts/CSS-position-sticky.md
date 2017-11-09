@@ -12,9 +12,11 @@ tags: ['css']
 --------------------------
 
 先看下面的 JsFiddle，注意滚动时左侧导航栏的行为。
-<iframe scrolling="no" width="100%" height="300" src="//jsfiddle.net/lotabout/d6xv8num/2/embedded/result,html,css/light" frameborder="0" allowfullscreen></iframe>
+<iframe height='265' scrolling='no' title='QOdWjW' src='//codepen.io/bearn/embed/QOdWjW/?height=265&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/bearn/pen/QOdWjW/'>QOdWjW</a> by Bearn (<a href='https://codepen.io/bearn'>@bearn</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 下面这个例子是 MDN 的 demo:
-<iframe scrolling="no" width="100%" height="300" src="//jsfiddle.net/lotabout/hjf99x20/embedded/result,html,css/light" frameborder="0" allowfullscreen></iframe>
+<iframe height='265' scrolling='no' title='xPgxaj' src='//codepen.io/bearn/embed/xPgxaj/?height=265&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/bearn/pen/xPgxaj/'>xPgxaj</a> by Bearn (<a href='https://codepen.io/bearn'>@bearn</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 只需要一行 CSS 就能实现，没有这个特性时，我们需要用 JS 监控滚动事件来实现。下面我们看看它的工作原理吧;
 
 ## 工作原理
