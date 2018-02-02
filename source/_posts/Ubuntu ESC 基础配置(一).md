@@ -9,13 +9,14 @@ tags: ['Linux']
     steps:
 
       ``` 
-      sudo  vi  /etc/ssh/sshd_config // 编辑配置文件，记录配置文件地址
+        sudo  vi  /etc/ssh/sshd_config // 编辑配置文件，记录配置文件地址
       
       ```
 
      输入密码；这里注意重新打开一个窗口，经验之谈，防止忘记了无法登陆服务器。
      
      下面是配置文件
+<!-- more -->
 
      ```
     # What ports, IPs and protocols we listen for
