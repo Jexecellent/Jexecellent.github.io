@@ -5,10 +5,10 @@ tags: ['Linux']
 ---
 
 1. 修改服务器访问默认端口，防止服务器被恶意访问。
-   
+
     steps:
 
-      ``` 
+      ```
       sudo  vi  /etc/ssh/sshd_config // 编辑配置文件，记录配置文件地址
       
       ```
@@ -153,7 +153,7 @@ sudo vi /etc/iptables.up.rules
 *filter
 
 # allow all connections
--A INPUT -m STATE --state ESTABLISHED,RELATED -j ACCEPT
+-A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 
 # allow out traffic 
 -A OUTPUT -j ACCEPT
@@ -169,7 +169,7 @@ sudo vi /etc/iptables.up.rules
 -A INPUT  -p icmp -m icmp --icmp-type 8 -j ACCEPT 
 
 # log denied calls 日志
--A INPUT -m  --limit 5/min -j LOG --log-prefix "iptables denied:" --log-level 7
+-A INPUT -m limit --limit 5/min -j LOG --log-prefix "iptables denied:" --log-level 7
 
 # drop incoming sensitive connections 拦截恶意访问，如果60秒内访问80端口超过150次及拦截
 -A INPUT -p tcp --dport 80 -i eth0 -m state --state NEW -m recent --set
@@ -259,7 +259,16 @@ sudo service fail2ban start/stop
 ```
 
 
+防火墙增加端口访问权限  
 
+```
+# 配置新的端口访问权限 ,端口进入权限和端口出去权限，两行配置都要加入
+-A INPUT -s 127.0.0.1 -p tcp --destination-port 8080 -m state --state NEW,ESTABLISHED -j ACCEPT
+-A OUTPUT -d 127.0.0.1 -p tcp --destination-port 8080 -m state --state ESTABLISHED -j ACCEPT
+
+
+
+```
 
 
 
