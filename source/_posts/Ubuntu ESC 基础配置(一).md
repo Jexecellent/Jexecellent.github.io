@@ -8,8 +8,8 @@ tags: ['Linux']
 
     steps:
 
-      ```
-      sudo  vi  /etc/ssh/sshd_config // 编辑配置文件，记录配置文件地址
+      ``` 
+        sudo  vi  /etc/ssh/sshd_config // 编辑配置文件，记录配置文件地址
       
       ```
 
@@ -17,7 +17,9 @@ tags: ['Linux']
      
      下面是配置文件
 
-     ```
+<!-- more -->
+
+    ```
     # What ports, IPs and protocols we listen for
     Port 3389
     # Use these options to restrict which interfaces/protocols sshd will bind to
